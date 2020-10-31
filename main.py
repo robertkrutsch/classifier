@@ -29,17 +29,17 @@ def plot_stats(v, t):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    train_dataset = Dataset(csv_file='/media/robert/80C2-37E4/multi_task/dataset/train.csv',
-                            root_dir='/media/robert/80C2-37E4/multi_task/dataset/train')
+    train_dataset = Dataset(csv_file='/content/dataset/train.csv',
+                            root_dir='/content/dataset/train')
 
-    valid_dataset = Dataset(csv_file='/media/robert/80C2-37E4/multi_task/dataset/valid.csv',
-                            root_dir='/media/robert/80C2-37E4/multi_task/dataset/valid')
+    valid_dataset = Dataset(csv_file='/content/dataset/valid.csv',
+                            root_dir='/content/dataset/valid')
 
     train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=4, shuffle=True, num_workers=2)
     valid_loader = torch.utils.data.DataLoader(valid_dataset, batch_size=4, shuffle=True, num_workers=2)
 
     net = Network()
-    tool = NetworkTool(path='/media/robert/80C2-37E4/multi_task/networks/')
+    tool = NetworkTool(path='/content/dataset/networks/')
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0.01, amsgrad=False)
