@@ -153,7 +153,7 @@ class GenData(object):
     Create the dataset 
 '''
 
-a = GenData(path='/content/gdrive/My Drive/Classifier/dataset', size=100, overwrite=1)
+a = GenData(path='/content/dataset', size=100, overwrite=1)
 a.create_dataset(0, 0, 0)
 print('Done')
 
