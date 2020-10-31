@@ -88,8 +88,8 @@ class NetworkTool(object):
         """
         model, optimizer, epoch, loss = self.load_checkpoint(epoch)
         model.eval()
-        test_dataset = Dataset(csv_file='/media/robert/80C2-37E4/multi_task/dataset/test.csv',
-                               root_dir='/media/robert/80C2-37E4/multi_task/dataset/test')
+        test_dataset = Dataset(csv_file='/content/dataset/test.csv',
+                               root_dir='/content/dataset/test')
 
         test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=4, shuffle=False, num_workers=2)
 
