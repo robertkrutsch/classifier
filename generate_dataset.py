@@ -153,9 +153,9 @@ class GenData(object):
     Create the dataset 
 '''
 
-#a = GenData(path='/media/robert/80C2-37E4/multi_task/dataset', size=10000, overwrite=1)
-#a.create_dataset(0, 0, 0)
-#print('Done')
+a = GenData(path='/content/gdrive/My Drive/Classifier/dataset', size=100, overwrite=1)
+a.create_dataset(0, 0, 0)
+print('Done')
 
 
 
